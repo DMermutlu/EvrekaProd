@@ -25,7 +25,7 @@ public class Base {
     public void beforeMethod() throws InterruptedException {
 
         /*Bu method login ol ve client olarak  */
-        System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/testdriver/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         options.setBinary("/var/jenkins_home/driver/chromedriver");
