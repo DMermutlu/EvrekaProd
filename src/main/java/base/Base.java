@@ -26,15 +26,16 @@ public class Base {
 
         /*Bu method login ol ve client olarak  */
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("headless");
         System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/chromedriver");
         driver = new ChromeDriver(options);
-        options.addArguments("start-maximized"); // open Browser in maximized mode
-        options.addArguments("disable-infobars"); // disabling infobars
-        options.addArguments("--disable-extensions"); // disabling extensions
-        options.addArguments("--disable-gpu"); // applicable to windows os only
-        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-        options.addArguments("--no-sandbox"); // Bypass OS security model
+        options.addArguments("window-size=1920x1080"); // open Browser in maximized mode
+        // options.addArguments("start-maximized"); // open Browser in maximized mode
+        // options.addArguments("disable-infobars"); // disabling infobars
+        options.addArguments("disable-extensions"); // disabling extensions
+        options.addArguments("disable-gpu"); // applicable to windows os only
+        options.addArguments("disable-dev-shm-usage"); // overcome limited resource problems
+        options.addArguments("no-sandbox"); // Bypass OS security model
         wait = new WebDriverWait(driver, 1000);
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
