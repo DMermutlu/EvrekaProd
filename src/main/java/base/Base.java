@@ -27,7 +27,7 @@ public class Base {
         /*Bu method login ol ve client olarak  */
         ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--headless");
-        System.setProperty("webdriver.chrome.driver", "/Users/dogukanmermutlu/IdeaProjects/EvrekaSingleCase/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/chromedriver");
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, 1000);
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
