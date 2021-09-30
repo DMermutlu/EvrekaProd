@@ -29,6 +29,17 @@ public class Base {
         options.addArguments("headless");
         System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/chromedriver");
         driver = new ChromeDriver(options);
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-setuid-sandbox");
+        options.addArguments("--remote-debugging-port=9222");
+        options.addArguments("--disable-dev-shm-using");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--disable-gpu");
+        options.addArguments("start-maximized");
+        options.addArguments("disable-infobars");
+        options.addArguments("user-data-dir=/var/jenkins_home/driver/tmp/");
+
+                /*
         options.addArguments("--user-data-dir=/var/jenkins_home/driver/tmp/");
         options.addArguments("window-size=1920x1080"); // open Browser in maximized mode
         // options.addArguments("start-maximized"); // open Browser in maximized mode
@@ -36,7 +47,8 @@ public class Base {
         options.addArguments("disable-extensions"); // disabling extensions
         options.addArguments("disable-gpu"); // applicable to windows os only
         options.addArguments("disable-dev-shm-usage"); // overcome limited resource problems
-        options.addArguments("no-sandbox"); // Bypass OS security model
+        options.addArguments("no-sandbox"); // Bypass OS security model */
+
         wait = new WebDriverWait(driver, 1000);
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
