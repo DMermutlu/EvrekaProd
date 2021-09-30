@@ -29,7 +29,6 @@ public class Base {
         options.addArguments("headless");
         System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/chromedriver");
         options.setBinary("/var/jenkins_home/driver/chromedriver");
-        driver = new ChromeDriver(options);
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-setuid-sandbox");
         options.addArguments("--remote-debugging-port=9222");
@@ -38,6 +37,7 @@ public class Base {
         options.addArguments("--disable-gpu");
         options.addArguments("start-maximized");
         options.addArguments("disable-infobars");
+        driver = new ChromeDriver(options);
         // options.addArguments("user-data-dir=/var/jenkins_home/driver/tmp/");
 
         wait = new WebDriverWait(driver, 1000);
