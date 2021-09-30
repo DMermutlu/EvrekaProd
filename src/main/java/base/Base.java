@@ -26,7 +26,7 @@ public class Base {
 
         /*Bu method login ol ve client olarak  */
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless");
+        options.addArguments("--headless");
         System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/chromedriver");
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, 1000);
