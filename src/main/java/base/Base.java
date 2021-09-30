@@ -29,6 +29,7 @@ public class Base {
         options.addArguments("headless");
         System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/chromedriver");
         driver = new ChromeDriver(options);
+        options.addArguments("--user-data-dir=/var/jenkins_home/driver/tmp/");
         options.addArguments("window-size=1920x1080"); // open Browser in maximized mode
         // options.addArguments("start-maximized"); // open Browser in maximized mode
         // options.addArguments("disable-infobars"); // disabling infobars
