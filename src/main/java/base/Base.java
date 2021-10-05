@@ -25,7 +25,7 @@ public class Base {
     public void beforeMethod() throws InterruptedException {
 
         /*Bu method login ol ve client olarak  */
-        System.setProperty("webdriver.chrome.driver", "/Users/dogukanmermutlu/jenkins_home/driver/version94/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/version94/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-setuid-sandbox");
