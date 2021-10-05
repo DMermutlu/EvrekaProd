@@ -109,7 +109,7 @@ public class TestCases extends Base {
         try {
             DashboardPage dashboardPage = new DashboardPage(driver);
             ResourceManagementPage resourceManagementPage = new ResourceManagementPage(driver);
-            Thread.sleep(5000);
+            Thread.sleep(2000);
             dashboardPage.findResourceManagementTab().click();/*click on the resource management tab*/
             Thread.sleep(5000);
             resourceManagementPage.findAddNewDeviceButton().click();/*click on the add new device button*/
