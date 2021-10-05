@@ -10,17 +10,17 @@
                     <include name="verifyLogout"/>
 
                     <include name="addNewRegion">
-                        <parameter name="regionName" value="AutoTest-31"></parameter>
+                        <parameter name="regionName" value="AutoTest-32"></parameter>
                     </include>
 
                     <include name="addNewDevice">
-                        <parameter name="deviceId" value="11:123:265:EVR"></parameter>
-                        <parameter name="deviceName" value="Auto Test Device - 31"></parameter>
+                        <parameter name="deviceId" value="11:EVR:32"></parameter>
+                        <parameter name="deviceName" value="Auto Test Device - 32"></parameter>
                     </include>
 
                     <include name="addNewVehicle">
-                        <parameter name="vehicleId" value="999138"></parameter>
-                        <parameter name="vehiclePlate" value="06EVRK38"></parameter>
+                        <parameter name="vehicleId" value="999139"></parameter>
+                        <parameter name="vehiclePlate" value="06EVRK39"></parameter>
                     </include>
 
                     <include name="addNewEmployee">
@@ -38,9 +38,9 @@
                     </include>
 
                     <include name="addAsset">
-                        <parameter name="assetName" value="AutomationTest Bin 1oct-1"></parameter>
-                        <parameter name="tagUid" value="24"></parameter>
-                        <parameter name="brandField" value="BrandAutomationTest Bin 1oct-1"></parameter>
+                        <parameter name="assetName" value="AutomationTest Bin 5oct-1"></parameter>
+                        <parameter name="tagUid" value="25"></parameter>
+                        <parameter name="brandField" value="BrandAutomationTest Bin 5oct-1"></parameter>
                         <parameter name="atikTipiField" value="5"></parameter>
                     </include>
                 </methods>
