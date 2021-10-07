@@ -10,37 +10,37 @@
                     <include name="verifyLogout"/>
 
                     <include name="addNewRegion">
-                        <parameter name="regionName" value="AutoTest-43"></parameter>
+                        <parameter name="regionName" value="AutoTest-44"></parameter>
                     </include>
 
                     <include name="addNewDevice">
-                        <parameter name="deviceId" value="11:EVR:43"></parameter>
-                        <parameter name="deviceName" value="Auto Test Device - 43"></parameter>
+                        <parameter name="deviceId" value="11:EVR:44"></parameter>
+                        <parameter name="deviceName" value="Auto Test Device - 44"></parameter>
                     </include>
 
                     <include name="addNewVehicle">
-                        <parameter name="vehicleId" value="999149"></parameter>
-                        <parameter name="vehiclePlate" value="06EVRK49"></parameter>
+                        <parameter name="vehicleId" value="999150"></parameter>
+                        <parameter name="vehiclePlate" value="06EVRK50"></parameter>
                     </include>
 
                     <include name="addNewEmployee">
-                        <parameter name="employeeId" value="7807"></parameter>
-                        <parameter name="employeeName" value="QA AutoTestEmployeee-007"></parameter>
-                        <parameter name="employeeCode" value="7807"></parameter>
+                        <parameter name="employeeId" value="7808"></parameter>
+                        <parameter name="employeeName" value="QA AutoTestEmployeee-008"></parameter>
+                        <parameter name="employeeCode" value="7808"></parameter>
                         <parameter name="employeePhoneNumber" value="05301221223"></parameter>
                     </include>
 
                     <include name="addNewShift">
-                        <parameter name="shiftName" value="test035"></parameter>
+                        <parameter name="shiftName" value="test036"></parameter>
                         <parameter name="eStartTime" value="20:15"></parameter>
                         <parameter name="lStartTime" value="22:16"></parameter>
                         <parameter name="length" value="11"></parameter>
                     </include>
 
                     <include name="addAsset">
-                        <parameter name="assetName" value="AutomationTest Bin 7oct-7"></parameter>
-                        <parameter name="tagUid" value="34"></parameter>
-                        <parameter name="brandField" value="BrandAutomationTest Bin 7oct-7"></parameter>
+                        <parameter name="assetName" value="AutomationTest Bin 7oct-8"></parameter>
+                        <parameter name="tagUid" value="35"></parameter>
+                        <parameter name="brandField" value="BrandAutomationTest Bin 7oct-8"></parameter>
                         <parameter name="atikTipiField" value="9"></parameter>
                     </include>
                 </methods>
