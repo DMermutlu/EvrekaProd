@@ -51,10 +51,12 @@ public class Base {
 //        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div/div/form/div[3]/div[2]/button")).click();/*click on the log-in button*/
 //        Thread.sleep(2000);
-        driver.findElement(By.xpath("//a[@role='button']")).click();
+//        driver.findElement(By.xpath("//a[@role='button']")).click();
         /*Select selectClient = new Select(driver.findElement(By.id("client_select_dropdown")));
         Thread.sleep(2000);
         selectClient.selectByVisibleText("BOOST CAMP:38");*/
+        driver.findElement(By.xpath("/html/body/div/header/nav/div[1]/a")).click();
+        Thread.sleep(2000);
     }
 
     protected void waitUntilClickableByElement(WebElement element) {
