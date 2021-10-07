@@ -10,23 +10,23 @@
                     <include name="verifyLogout"/>
 
                     <include name="addNewRegion">
-                        <parameter name="regionName" value="AutoTest-38"></parameter>
+                        <parameter name="regionName" value="AutoTest-40"></parameter>
                     </include>
 
                     <include name="addNewDevice">
-                        <parameter name="deviceId" value="11:EVR:38"></parameter>
-                        <parameter name="deviceName" value="Auto Test Device - 38"></parameter>
+                        <parameter name="deviceId" value="11:EVR:40"></parameter>
+                        <parameter name="deviceName" value="Auto Test Device - 40"></parameter>
                     </include>
 
                     <include name="addNewVehicle">
-                        <parameter name="vehicleId" value="999144"></parameter>
-                        <parameter name="vehiclePlate" value="06EVRK44"></parameter>
+                        <parameter name="vehicleId" value="999146"></parameter>
+                        <parameter name="vehiclePlate" value="06EVRK46"></parameter>
                     </include>
 
                     <include name="addNewEmployee">
-                        <parameter name="employeeId" value="7802"></parameter>
-                        <parameter name="employeeName" value="QA AutoTestEmployeee-002"></parameter>
-                        <parameter name="employeeCode" value="7802"></parameter>
+                        <parameter name="employeeId" value="7804"></parameter>
+                        <parameter name="employeeName" value="QA AutoTestEmployeee-004"></parameter>
+                        <parameter name="employeeCode" value="7804"></parameter>
                         <parameter name="employeePhoneNumber" value="05301221223"></parameter>
                     </include>
 
@@ -38,9 +38,9 @@
                     </include>
 
                     <include name="addAsset">
-                        <parameter name="assetName" value="AutomationTest Bin 7oct-5"></parameter>
-                        <parameter name="tagUid" value="30"></parameter>
-                        <parameter name="brandField" value="BrandAutomationTest Bin 7oct-5"></parameter>
+                        <parameter name="assetName" value="AutomationTest Bin 7oct-1"></parameter>
+                        <parameter name="tagUid" value="31"></parameter>
+                        <parameter name="brandField" value="BrandAutomationTest Bin 7oct-1"></parameter>
                         <parameter name="atikTipiField" value="8"></parameter>
                     </include>
                 </methods>

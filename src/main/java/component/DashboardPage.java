@@ -21,7 +21,7 @@ public class DashboardPage {
 
     public WebElement findResourceManagementTab() {
 //        By resourceManagementTab = By.xpath("//span[normalize-space()='Resource Management']");
-        By resourceManagementTab = By.xpath("/html/body/div[1]/aside/section/ul/li[8]/a/span");
+        By resourceManagementTab = By.xpath("/html/body/div/aside/section/ul/li[8]/a");
 //        By resourceManagementTab = By.id("resource");
         return driver.findElement(resourceManagementTab);
     }
