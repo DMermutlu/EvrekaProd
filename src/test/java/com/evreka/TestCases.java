@@ -11,15 +11,15 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-
 public class TestCases extends Base {
-    String newRegionName = "";
-    String newDeviceName = "";
-    String newDevicDeviceName = "";
-
+    String regionName = "";
+    String deviceName = "";
+    String vehiclePlate = "";
+    String employeeName = "";
+    String employeeCode = "";
+    String shiftName = "";
+    String eStartTime = "";
+    String lStartTime = "";
 
     @BeforeTest
     public void beforeMethod() throws InterruptedException {
@@ -63,7 +63,7 @@ public class TestCases extends Base {
     @Parameters({"regionName"})
     void addNewRegion(String newRegionName) throws InterruptedException {
         beforeMethod();
-        this.newRegionName = newRegionName;
+        this.regionName = newRegionName;
         try {
             DashboardPage dashboardPage = new DashboardPage(driver);
             ResourceManagementPage resourceManagementPage = new ResourceManagementPage(driver);
@@ -105,6 +105,7 @@ public class TestCases extends Base {
     @Test(priority = 4)
     @Parameters({"deviceId", "deviceName"})
     void addNewDevice(String deviceId, String deviceName) throws InterruptedException {
+        this.deviceName = deviceName;
         beforeMethod();
         try {
             DashboardPage dashboardPage = new DashboardPage(driver);
@@ -139,7 +140,7 @@ public class TestCases extends Base {
             Thread.sleep(2000);
             String expectedDeviceName = deviceName;
             Assert.assertEquals(actualDeviceName, expectedDeviceName);
-            this.newDeviceName = deviceName;
+            this.deviceName = deviceName;
 
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -151,6 +152,7 @@ public class TestCases extends Base {
     @Test(priority = 5)
     @Parameters({"vehicleId", "vehiclePlate"})
     void addNewVehicle(Integer newVehicleId, String newVehiclePlate) throws InterruptedException {
+        this.vehiclePlate = newVehiclePlate;
         beforeMethod();
         try {
             DashboardPage dashboardPage = new DashboardPage(driver);
@@ -168,7 +170,7 @@ public class TestCases extends Base {
             selectClient.selectByIndex(1);
 
             Select selectTablet = new Select(resourceManagementPage.findAddNewVehicleTabletCombobox());
-            selectTablet.selectByVisibleText(newDeviceName);
+            selectTablet.selectByVisibleText(deviceName);
             Thread.sleep(3000);
 
             Select selectDataSource = new Select(resourceManagementPage.findAddNewVehicleDataSourceCombobox());
@@ -199,7 +201,9 @@ public class TestCases extends Base {
 
     @Test(priority = 6)
     @Parameters({"employeeId", "employeeName", "employeeCode", "employeePhoneNumber"})
-    void addNewEmployee(Integer employeeId, String employeeName, Integer employeeCode, String employeePhoneNumber) throws InterruptedException {
+    void addNewEmployee(Integer employeeId, String employeeName, String employeeCode, String employeePhoneNumber) throws InterruptedException {
+        this.employeeCode = employeeCode;
+        this.employeeName = employeeName;
         beforeMethod();
         try {
             DashboardPage dashboardPage = new DashboardPage(driver);
@@ -214,11 +218,11 @@ public class TestCases extends Base {
             selectEmployeeType.selectByIndex(1); /*Select crew member as type*/
             resourceManagementPage.findAddNewEmployeeIdField().sendKeys(String.valueOf(employeeId));
             resourceManagementPage.findAddNewEmployeeNameField().sendKeys(employeeName);
-            resourceManagementPage.findAddNewEmployeeCodeField().sendKeys(String.valueOf(employeeCode));
+            resourceManagementPage.findAddNewEmployeeCodeField().sendKeys(employeeCode);
             Thread.sleep(2000);
             Select selectEmployeeTable = new Select(resourceManagementPage.findAddNewEmployeeTabletCombobox());
             Thread.sleep(2000);
-            selectEmployeeTable.selectByVisibleText(newDeviceName);
+            selectEmployeeTable.selectByVisibleText(deviceName);
             Thread.sleep(2000);
             Select selectEmployeeDataSource = new Select(resourceManagementPage.findAddNewEmployeeDataSourceCombobox());
             Thread.sleep(2000);
@@ -256,6 +260,9 @@ public class TestCases extends Base {
     @Test(priority = 7)
     @Parameters({"shiftName", "eStartTime", "lStartTime", "length"})
     void addNewShift(String shiftName, String eStartTime, String lStartTime, Integer length) throws InterruptedException {
+        this.shiftName = shiftName;
+        this.eStartTime = eStartTime;
+        this.lStartTime = lStartTime;
         beforeMethod();
 
         try {
@@ -267,7 +274,11 @@ public class TestCases extends Base {
             resourceManagementPage.findAddNewShiftButton().click();
             Thread.sleep(3000);
             resourceManagementPage.findAddNewShiftNameField().sendKeys(shiftName);
+            Thread.sleep(2000);
+            resourceManagementPage.findAddNewShiftEStartTimeField().clear();
             resourceManagementPage.findAddNewShiftEStartTimeField().sendKeys(eStartTime);
+            Thread.sleep(2000);
+            resourceManagementPage.findAddNewShiftLStartTimeField().clear();
             resourceManagementPage.findAddNewShiftLStartTimeField().sendKeys(lStartTime);
             resourceManagementPage.findAddNewShiftLengthField().sendKeys(String.valueOf(length));
             resourceManagementPage.findAddNewShiftSaveButton().click();
@@ -292,6 +303,57 @@ public class TestCases extends Base {
 
 
         afterMethod();
+
+    }
+
+    @Test(priority = 8)
+    @Parameters({"routeOrderName", "startTime", "endTime"})
+    void addNewRouteOrder(String routeOrderName, String startTime, String endtime) throws InterruptedException {
+        String shift = shiftName + " " + "(" + eStartTime + "-" + lStartTime + ")";
+        System.out.println(shift);
+        String captain = employeeCode +" "+ "-"+" "+ employeeName;
+        System.out.println(captain);
+        beforeMethod();
+        try {
+            DashboardPage dashboardPage = new DashboardPage(driver);
+            ResourceManagementPage resourceManagementPage = new ResourceManagementPage(driver);
+            Thread.sleep(5000);
+            dashboardPage.findResourceManagementTab().click();
+            Thread.sleep(5000);
+            resourceManagementPage.findAddNewRouteOrderButton().click();
+            resourceManagementPage.findAddNewRouteOrderNameField().sendKeys(routeOrderName);
+            Select operation = new Select(resourceManagementPage.findAddNewRouteOrderOperationCombobox());
+            Thread.sleep(2000);
+            operation.selectByVisibleText("QA Operation 2");
+            Thread.sleep(2000);
+            Select region = new Select(resourceManagementPage.findAddNewRouteOrderRegionCombobox());
+            Thread.sleep(2000);
+            region.selectByVisibleText(regionName);
+            Select vehicle = new Select(resourceManagementPage.findAddNewRouteOrderVehicleCombobox());
+            Thread.sleep(2000);
+            vehicle.selectByVisibleText(vehiclePlate);
+            Thread.sleep(2000);
+            Select shiftComboBox = new Select(resourceManagementPage.findAddNewRouteOrderShiftCombobox());
+            Thread.sleep(2000);
+            shiftComboBox.selectByVisibleText(shift);
+            resourceManagementPage.findAddNewRouteOrderStartTimeField().clear();
+            Thread.sleep(1000);
+            resourceManagementPage.findAddNewRouteOrderStartTimeField().sendKeys(startTime);
+            Thread.sleep(2000);
+            resourceManagementPage.findAddNewRouteOrderFinisTimeField().clear();
+            Thread.sleep(1000);
+            resourceManagementPage.findAddNewRouteOrderFinisTimeField().sendKeys(endtime);
+            Thread.sleep(2000);
+            resourceManagementPage.findAddNewRouteOrderDaysAsCars().click();
+            Select captainComboBox = new Select(resourceManagementPage.findAddNewRouteOrderCaptainCombobox());
+            Thread.sleep(2000);
+            captainComboBox.selectByVisibleText(captain);
+            resourceManagementPage.findAddNewRouteOrderSaveButton();
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
 
     }
 

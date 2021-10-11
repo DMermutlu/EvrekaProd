@@ -15,33 +15,34 @@ public class AssetManagementPage {
     }
 
     public WebElement findAddAssetButton() {
-        By addAssetButton = By.xpath("//*[@id=\"root\"]/div[3]/div[3]/div/div/div[1]/div[2]/div/div[1]/div[1]/button");
+        By addAssetButton = By.xpath(" //*[@id=\"root\"]/div[3]/div[3]/div/div[2]/div/div[1]/div[2]/div/div[1]/div[1]/button");
         return driver.findElement(addAssetButton);
     }
 
     public WebElement findAddAssetNameField() {
-        By addAssetNameField = By.xpath("//*[@id=\"root\"]/div[3]/div[3]/div/div/div/div[1]/div/form/div/div[1]/div[1]/input");
+        By addAssetNameField = By.xpath("//*[@id=\"root\"]/div[3]/div[3]/div/div/form/div[1]/div[1]/div/div/div[1]/div[1]/input");
         return driver.findElement(addAssetNameField);
     }
 
     public WebElement findAddAssetTagUidField() {
-        By addAssetTagUidField = By.xpath("/html/body/div[1]/div[3]/div[3]/div/div/div/div[1]/div/form/div/div[2]/div[1]/input");
+        By addAssetTagUidField = By.xpath("//*[@id=\"root\"]/div[3]/div[3]/div/div/form/div[1]/div[1]/div/div/div[2]/div[1]/input");
         return driver.findElement(addAssetTagUidField);
     }
 
     public WebElement findAddAssetLocationField() {
-        By addAssetLocationField = By.xpath("/html/body/div[1]/div[3]/div[3]/div/div/div/div[1]/div/form/div/div[3]/div[1]/input");
+        By addAssetLocationField = By.xpath("//*[@id=\"root\"]/div[3]/div[3]/div/div/form/div[1]/div[1]/div/div/div[3]/div[1]/input");
         return driver.findElement(addAssetLocationField);
     }
 
     public WebElement selectionToMap() {
-        By selectionToMap = By.xpath("/html/body/div[1]/div[3]/div[3]/div/div/div/div[2]/div/div[2]/div");
+        By selectionToMap = By.xpath("//*[@id=\"root\"]/div[3]/div[3]/div/div/form/div[1]/div[3]/div/div/div[2]/div");
         return driver.findElement(selectionToMap);
     }
 
     public WebElement findAddAssetTypeCombobox() {
-        By addAssetTypeCombobox = By.xpath("/html/body/div[1]/div[3]/div[3]/div/div/div/div[1]/div/form/div/div[4]/div/div/div[1]");
+        By addAssetTypeCombobox = By.xpath("//*[@id=\"root\"]/div[3]/div[3]/div/div/form/div[1]/div[1]/div/div/div[4]/div/div/div");
         return driver.findElement(addAssetTypeCombobox);
+
     }
 
     public WebElement findAddAssetBrandField() {
@@ -55,17 +56,17 @@ public class AssetManagementPage {
     }
 
     public WebElement findAddAssetAtikTipiField() {
-        By addAssetAtikTipiField = By.xpath("/html/body/div[1]/div[3]/div[3]/div/div/div/div[1]/div/form/div/div[5]/div/div/div[1]/input");
+        By addAssetAtikTipiField = By.xpath("//*[@id=\"root\"]/div[3]/div[3]/div/div/form/div[1]/div[1]/div/div/div[5]/div/div/div[1]/input");
         return driver.findElement(addAssetAtikTipiField);
     }
 
     public WebElement findAddAssetSubmitButton() {
-        By addAssetSubmitButton = By.xpath("/html/body/div[1]/div[3]/div[3]/div/div/div/div[1]/div/form/div/div[7]/div/div/div[2]/button/div");
+        By addAssetSubmitButton = By.xpath("//*[@id=\"root\"]/div[3]/div[3]/div/div/form/div[3]/div[1]/div/button[2]");
         return driver.findElement(addAssetSubmitButton);
     }
 
     public WebElement findSearchBarAssetName() {
-        By searchBarAssetName = By.xpath("//th[2]//div[2]//input[1]");
+        By searchBarAssetName = By.xpath("//*[@id=\"root\"]/div[3]/div[3]/div/div[2]/div/div[1]/div[2]/div/div[2]/table/thead/tr/th[2]/div[2]/input");
         return driver.findElement(searchBarAssetName);
     }
 

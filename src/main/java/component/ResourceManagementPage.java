@@ -188,8 +188,9 @@ public class ResourceManagementPage {
     }
 
     public WebElement findAddNewEmployeeGeneralWasteOperation() {
-        By addNewEmployeeGeneralWasteOperation = By.xpath("/html[1]/body[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/form[1]/div[10]/select[1]/option[2]");
+        By addNewEmployeeGeneralWasteOperation = By.xpath("//*[@id=\"add-driver-modal\"]/div/div/div[2]/form/div[10]/select/option[1]");
         return driver.findElement(addNewEmployeeGeneralWasteOperation);
+
     }
 
     public WebElement findAddNewEmployeePhoneNumberField() {
@@ -251,5 +252,60 @@ public class ResourceManagementPage {
         By searchedShiftName = By.xpath("/html/body/div[1]/div[1]/section/div[1]/div/div[6]/div/div/div[2]/table/tbody/tr[2]/td[2]");
         return driver.findElement(searchedShiftName);
     }
+
+    public WebElement findAddNewRouteOrderButton() {
+        By addNewRouteOrderButton = By.xpath("//*[@id=\"route_order_box\"]/div[2]/div[2]/div[1]/a");
+        return driver.findElement(addNewRouteOrderButton);
+    }
+
+    public WebElement findAddNewRouteOrderNameField() {
+        By addNewRouteOrderNameField = By.id("name");
+        return driver.findElement(addNewRouteOrderNameField);
+    }
+
+    public WebElement findAddNewRouteOrderRegionCombobox() {
+        By addNewRouteOrderRegionCombobox = By.id("editable_region");
+        return driver.findElement(addNewRouteOrderRegionCombobox);
+    }
+
+    public WebElement findAddNewRouteOrderVehicleCombobox() {
+        By addNewRouteOrderVehicleCombobox = By.id("editable_vehicle");
+        return driver.findElement(addNewRouteOrderVehicleCombobox);
+    }
+
+    public WebElement findAddNewRouteOrderShiftCombobox() {
+        By addNewRouteOrderShiftCombobox = By.id("editable_shift");
+        return driver.findElement(addNewRouteOrderShiftCombobox);
+    }
+
+    public WebElement findAddNewRouteOrderStartTimeField() {
+        By addNewRouteOrderStartTimeField = By.id("order_time");
+        return driver.findElement(addNewRouteOrderStartTimeField);
+    }
+
+    public WebElement findAddNewRouteOrderFinisTimeField() {
+        By addNewRouteOrderFinishTimeField = By.id("route_finish_time");
+        return driver.findElement(addNewRouteOrderFinishTimeField);
+    }
+
+    public WebElement findAddNewRouteOrderDaysAsCars() {
+        By addNewRouteOrderDaysAsCars = By.id("chk_crs");
+        return driver.findElement(addNewRouteOrderDaysAsCars);
+    }
+
+    public WebElement findAddNewRouteOrderCaptainCombobox() {
+        By addNewRouteOrderCaptainCombobox = By.id("editable_driver");
+        return driver.findElement(addNewRouteOrderCaptainCombobox);
+    }
+
+    public WebElement findAddNewRouteOrderSaveButton() {
+        By addNewRouteOrderSaveButton = By.id("routeorder_save_btn");
+        return driver.findElement(addNewRouteOrderSaveButton);
+    }
+    
+    public WebElement findAddNewRouteOrderOperationCombobox(){
+            By addNewRouteOrderOperationCombobox = By.id("editable_operation");
+            return driver.findElement(addNewRouteOrderOperationCombobox);
+        }
 
 }

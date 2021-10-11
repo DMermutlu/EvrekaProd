@@ -25,18 +25,19 @@ public class Base {
     public void beforeMethod() throws InterruptedException {
 
         /*Bu method login ol ve client olarak  */
-        System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/version94/chromedriver");
+//        System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/version94/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/dogukanmermutlu/IdeaProjects/EvrekaSingleCase/chromedriver");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-setuid-sandbox");
-        options.addArguments("--remote-debugging-port=9222");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--disable-extensions");
-        options.addArguments("--disable-gpu");
-        options.addArguments("start-maximized");
-        options.addArguments("disable-infobars");
-        options.addArguments("user-data-dir=/var/jenkins_home/driver/tmp/");
-        options.addArguments("headless");
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--disable-setuid-sandbox");
+//        options.addArguments("--remote-debugging-port=9222");
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("--disable-extensions");
+//        options.addArguments("--disable-gpu");
+//        options.addArguments("start-maximized");
+//        options.addArguments("disable-infobars");
+//        options.addArguments("user-data-dir=/var/jenkins_home/driver/tmp/");
+//        options.addArguments("headless");
 
         driver = new ChromeDriver(options);
         // options.addArguments("user-data-dir=/var/jenkins_home/driver/tmp/");
@@ -49,7 +50,7 @@ public class Base {
         driver.findElement(By.id("id_username")).sendKeys("qa-dogukan");
         driver.findElement(By.id("id_password")).sendKeys("!Q2w3e4r");
 //        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div/div/form/div[3]/div[2]/button")).click();/*click on the log-in button*/
+        driver.findElement(By.xpath("/html/body/div/div/form/div[4]/div[2]/button")).click();/*click on the log-in button*/
         Thread.sleep(2000);
 //        driver.findElement(By.xpath("//a[@role='button']")).click();
         /*Select selectClient = new Select(driver.findElement(By.id("client_select_dropdown")));
