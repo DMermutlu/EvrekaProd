@@ -10,7 +10,7 @@
                     <include name="verifyLogout"/>
 
                     <include name="addNewRegion">
-                        <parameter name="regionName" value="AutoTest-65"></parameter>
+                        <parameter name="regionName" value="AutoTest-66"></parameter>
                     </include>
 
                     <include name="addNewDevice">
