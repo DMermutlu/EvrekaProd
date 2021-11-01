@@ -31,7 +31,7 @@
                     </include>
 
                     <include name="addNewShift">
-                        <parameter name="shiftName" value="test17"></parameter>
+                        <parameter name="shiftName" value="test18"></parameter>
                         <parameter name="eStartTime" value="20:15"></parameter>
                         <parameter name="lStartTime" value="22:15"></parameter>
                         <parameter name="length" value="12"></parameter>
